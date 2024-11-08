@@ -1,0 +1,505 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --font-color-black : #1E1E1E; 
+    --font-color-white: #f8f8f8;
+    --bg-color: #f8f8f8;
+    --light-green: #4C4F34;
+    --dark-green: #323423;
+    --button-color: #3B3D29;
+    --button-color-hover: #232518;
+    --real100vh: 100vh;
+
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Inter";
+    font-weight: 700;
+    width: 100vw;
+    overflow-x: hidden !important;
+}
+
+/* LANDING PAGE */
+
+.navbar{
+    z-index: 997;
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--light-green);
+    border-bottom: 5px solid var(--dark-green);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("/resources/home/backgrounds/topography20.webp");
+    background-position: center;
+    background-clip: border-box;
+    background-size: cover;
+}
+
+.navbar ul {
+    width: 80%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul li{
+    display: inline-block;
+    width: 180px;
+    padding: 10px 0;
+    border-radius: 50px;
+
+    text-align: center;
+    transition: background-color 0.3s linear;
+}
+.OpenSlider {
+    display: none !important;
+}
+
+.navbar ul li:nth-child(n+3){
+    background-color: var(--button-color);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.navbar ul li:nth-child(n+3):hover{
+    background-color: var(--button-color-hover);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--font-color-white);
+}
+
+.navbar ul li a img{
+    height: 70px;
+}
+
+.navbarhidden{
+    position: fixed ;
+    right: -100% ;
+    top: 0px ;
+    height: var(--real100vh) ;
+    width: 70vw;
+    background-color: rgba(76, 79, 52, .8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 10vh 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: right .20s linear;
+    overflow-x: hidden;
+    z-index: 999 !important;
+}
+
+.navbarhidden ul{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.navbarhidden ul li{
+    background-color: var(--button-color);
+    width: 300px;
+    padding: 15px 0px;
+    border-radius: 50px;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.navbarhidden ul li a {
+    text-decoration: none;
+    color: var(--font-color-white);
+    font-size: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* LANDING PAGE */
+.LandingPageBG {
+    background-image: url("/resources/home/backgrounds/LandingPageBG.webp");
+    /*height: var(--real100vh);*/
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center ;
+
+}
+
+.infobar {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--button-color);
+    z-index: 998;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+
+    font-size: 50px;
+    color: var(--font-color-white);
+    border-top: 5px solid var(--dark-green);
+
+}
+
+.infobar a{
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--font-color-white);
+    background-color: var(--button-color-hover);
+    border-radius: 30px;
+    padding: 10px 30px;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    transition: padding 0.5s linear;
+}
+.infobar a:hover {
+    padding: 10px 40px;
+}
+
+.textinfo {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.contacts{
+    background-image: url("/resources/home/backgrounds/topography40.webp");
+    height: 50vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center ;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact h1{
+    font-size: 70px;
+    border-bottom: 5px solid #000000;
+    margin-bottom: 10px;
+}
+
+.contact h2 {
+    font-size: 30px;
+}
+
+.contact h3{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+
+.contacts a {
+    text-decoration: none;
+}
+
+.boxes {
+    display: flex;
+    gap: 5%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background-color: var(--light-green);
+
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.25s linear;
+}
+
+.box:hover {
+    background-color: var(--dark-green);
+}
+
+.box h1{
+    font-size: 40px;
+    color: var(--bg-color);
+}
+
+.SpolekSpj.box img{
+    height: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* QUERIES */
+
+@media only screen and (max-width: 1900px){
+    .navbar ul {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1750px){
+    .contacts{
+        height: auto;
+        flex-direction: column;
+        padding: 5vh 0;
+        gap: 5vh;
+    }
+}
+
+@media only screen and (max-width: 1700px){
+    .navbar ul {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 1600px){
+    .navbar ul li{
+        width: 160px;
+    }
+
+    .navbar ul li a{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .navbar ul li{
+        width: 140px;
+    }
+    .infobar{
+        font-size: 38px;
+        gap: 3%
+    }
+    .infobar a {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .navbar ul {
+        width: 98%;
+    }
+    .navbar ul li{
+        width: 120px;
+    }
+
+    .navbar ul li:first-child{
+        width: 70px;
+    }
+
+    .navbar ul li a{
+        font-size: 15px;
+    }
+    .infobar{
+        font-size: 35px;
+    }
+    .infobar a {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .navbar ul {
+        width: 98%;
+    }
+    .navbar ul li{
+        width: 100px;
+    }
+
+    .navbar ul li a{
+        font-size: 13px;
+    }
+    .infobar{
+        font-size: 28px;
+        gap: 1%
+    }
+    .infobar a {
+        font-size: 25px;
+        padding: 5px 10px;
+    }
+    .LandingPageBG{
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .textinfo{
+        flex-direction: column;
+        gap: 5vh;
+    }
+    .boxes {
+        width: 100vw;
+        padding: 0 5vw;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 5vh;
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    .navbar ul {
+        width: 99%;
+    }
+    .navbar ul li{
+        width: 90px;
+    }
+
+    .navbar ul li:first-child{
+        width: 50px;
+    }
+
+    .navbar ul li a{
+        font-size: 12px;
+    }
+    .infobar {
+        flex-direction: column;
+        gap: 10%;
+        text-align: center;
+    }
+    .LandingPageBG{
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .navbar ul li:nth-child(n+3){
+        display: none;
+    }
+    .navbar ul li{
+        width: 100px !important;
+    }
+    .OpenSlider {
+        display: inline-block !important;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .navbarhidden {
+        width: 100vw;
+        height: var(--real100vh);
+        padding: 2vh 0;
+    }
+    .infobar {
+        background-color: var(--bg-color);
+    }
+    .infobar h1{
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--button-color);
+        height: 50%;
+        width: 100%;
+    }
+    .infobar a {
+        font-size: 28px;
+        padding: 5px 10px;
+    }
+
+
+    .LandingPageBG{
+        height: 57vh;
+    }
+
+    .contact h1{
+        font-size: 50px;
+        
+    }
+    
+    .contact h2 {
+        font-size: 25px;
+    }
+    
+    .contact h3{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .infobar h1{
+        font-size: 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 350px){
+    .infobar h1{
+        font-size: 17px;
+    }
+    .infobar a {
+        font-size: 25px;
+        padding: 5px 10px;
+    }
+    .contact h1{
+        font-size: 45px;
+        
+    }
+    
+    .contact h2 {
+        font-size: 20px;
+    }
+    
+    .contact h3{
+        font-size: 18px;
+    }
+    .LandingPageBG{
+        height: 50vh;
+    }
+}
