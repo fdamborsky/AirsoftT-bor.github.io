@@ -10,17 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty("--real100vh", value);
     };
 
-    if (window.innerWidth && window.innerWidth <= 1000){
+    if (window.innerWidth && window.innerWidth <= 1400){
         LandingPageBG.style.backgroundImage = `url("resources/home/LandingPageBG2.webp")`
     }
-    if (window.innerWidth && window.innerWidth <= 800){
-        LandingPageBG.style.backgroundImage = `url("resources/home/LandingPageBG3.webp")`
-    }
-    if (window.innerWidth && window.innerWidth <= 500){
-        document.querySelector(".infobar h1").innerHTML = "TÁBOR 2025<br>07.07. - 18.07. REŠICE"
-            
-    }
-
+    
 
     // Call the function on load
     set100vhVar();
