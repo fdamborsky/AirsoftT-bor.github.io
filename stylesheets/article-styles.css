@@ -38,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-image: url("/resources/home/backgrounds/topography20.webp");
+    background-image: url("../resources/home/backgrounds/topography20.webp");
     background-position: center;
     background-clip: border-box;
     background-size: cover;

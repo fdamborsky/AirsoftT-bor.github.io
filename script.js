@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     if (window.innerWidth && window.innerWidth <= 1400){
-        LandingPageBG.style.backgroundImage = `url("../resources/home/backgrounds/LandingPageBG2.webp")`
+        LandingPageBG.style.backgroundImage = `url("resources/home/backgrounds/LandingPageBG2.webp")`
     }
     
 
