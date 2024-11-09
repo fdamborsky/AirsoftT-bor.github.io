@@ -17,9 +17,11 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--bg-green);
+    background-image: url("../resources/home/backgrounds/topography40.webp");
     font-family: "Inter";
     font-weight: 700;
+    height: 100vh;
     width: 100vw;
     overflow-x: hidden !important;
 }
@@ -78,11 +80,12 @@ body {
 }
 
 .navbar ul li a {
-    display: block;
     text-decoration: none;
     font-size: 20px;
     color: var(--font-color-white);
     width: 100%;
+    display: block;
+
 }
 
 .navbar ul li a img{
@@ -138,79 +141,52 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 
+    width: 100%;
 }
 
-.article {
-    padding: 150px 20vw;
-
+.partners {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-}
-
-.text {
-    text-align: left;
-}
-
-.text h2{
-    padding-bottom: 1vh;
-}
-
-.article h1{
-    width: fit-content;
-    text-align: center;
-    font-size: 70px;
-    border-bottom: #000000 solid 5px;
-    margin-bottom: 5vh;
-}
-
-.article h2{
-    font-size: 30px;
-    font-weight: 300;
-    text-align: left;
-}
-
-.article h3{
-    font-size: 35px;
-    font-weight: 600;
-    text-align: left;
-}
-
-.button{
-    background-color: var(--light-green);
-    text-decoration: none;
-    color: var(--bg-color);
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 30px;
-    margin: 5vh 0 0vh 0;
-    
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
 }
 
-.button.download{
+.partners h1{
+    font-size: 64px;
+    border-bottom: 5px solid #000000;
     margin-bottom: 5vh;
 }
 
-.text .link {
-    text-decoration: none;
-    color: var(--font-color-black);
-    font-size: 30px !important;
-    line-height: 1.5;
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+
+    margin: 0 0 6vh 0;
 }
 
+.box h2{
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 20px;
+    list-style: circle;
+}
 
+.box h3{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 
-
-
+.box img {
+    height: 60px;
+}
 
 
 @media only screen and (max-width: 1900px){
@@ -236,6 +212,8 @@ body {
     .navbar ul li a{
         font-size: 15px;
     }
+
+
 }
 
 @media only screen and (max-width: 1400px){
@@ -259,6 +237,7 @@ body {
     .navbar ul li a{
         font-size: 15px;
     }
+
 }
 
 @media only screen and (max-width: 1000px){
@@ -271,6 +250,10 @@ body {
 
     .navbar ul li a{
         font-size: 13px;
+    }
+    .box{
+        width: 80vw;
+        text-align: center;
     }
 }
 
@@ -294,10 +277,6 @@ body {
     .navbar ul li a{
         font-size: 12px;
     }
-    .text .link {
-        font-size: 25px !important;
-        line-height: 1.5;
-    }
 
 }
 
@@ -311,13 +290,6 @@ body {
     .OpenSlider {
         display: inline-block !important;
     }
-    .article{
-        padding: 100px 10vw;
-    }
-    .text .link {
-        font-size: 22px !important;
-        line-height: 1.5;
-    }
     
 }
 
@@ -327,37 +299,21 @@ body {
         height: var(--real100vh);
         padding: 2vh 0;
     }
-
-    .article h1{
-        font-size: 50px;
+    .box h2{
+        font-size: 25px;
     }
-    .text .link {
-        font-size: 18px !important;
-        line-height: 1.5;
+    
+    .box h3{
+        font-size: 30px;
+        gap: 5px;
     }
+    
 }
 
 @media only screen and (max-width: 400px){
-    .infobar h1{
-        font-size: 20px;
-    }
-    .article{
-        padding: 100px 5vw;
-    }
-
-    .article h2, .article h3{
-        font-size: 20px;
-    }
-
-
-    .text .link {
-        font-size: 15px !important;
-        line-height: 2.5;
-    }
-    .button{
-        font-size: 18px;
-    }
-    
+  .box img{
+    height: 40px;
+  }
 }
 
 @media only screen and (max-width: 350px){
