@@ -17,7 +17,8 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--bg-green);
+    background-image: url("../resources/home/backgrounds/topography40.webp");
     font-family: "Inter";
     font-weight: 700;
     width: 100vw;
@@ -78,11 +79,12 @@ body {
 }
 
 .navbar ul li a {
-    display: block;
     text-decoration: none;
     font-size: 20px;
     color: var(--font-color-white);
     width: 100%;
+    display: block;
+
 }
 
 .navbar ul li a img{
@@ -138,45 +140,61 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 
+    width: 100%;
 }
 
-.article {
-    padding: 150px 20vw;
-
+.campcounselors{
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
 }
 
-.text {
-    text-align: left;
+.campcounselors .position{
+    font-size: 64px;
+    border-bottom: 5px solid #c8343400;
+    margin-bottom: 8vh;
+    border-bottom: 5px solid rgb(0, 0, 0);
 }
 
-.text h2{
-    padding-bottom: 1vh;
+.counselor {
+    display: flex;
+    gap: 5vw;
+    margin-bottom: 10vh;
+    width: 1600px;
+}
+.counselor-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.article h1{
-    width: fit-content;
-    text-align: center;
-    font-size: 70px;
-    border-bottom: #000000 solid 5px;
-    margin-bottom: 5vh;
+
+.counselor img{
+    border-radius: 50px;
+    height: 400px;
+    width: 400px;
 }
 
-.article h2{
-    font-size: 30px;
-    font-weight: 300;
-    text-align: left;
+.counselor h1{
+    font-size: 64px;
 }
 
-.article h3{
-    font-size: 35px;
-    font-weight: 600;
-    text-align: left;
+.counselor h2{
+    font-size: 24px;
+    font-weight: 50px;
+}
+
+.counselor ul{
+    padding-top: 5%;
+}
+
+.counselor li{
+    font-size: 28px;
+    list-style: circle;
+    font-weight: 400;
 }
 
 .button{
@@ -186,7 +204,8 @@ body {
     padding: 10px;
     font-size: 20px;
     border-radius: 30px;
-    margin: 5vh 0 0vh 0;
+    margin: 5vh 0 5vh 0;
+    width: 400px;
     
 
     display: flex;
@@ -195,21 +214,6 @@ body {
     justify-content: center;
     gap: 10px;
 }
-
-.button.download{
-    margin-bottom: 5vh;
-}
-
-.text .link {
-    text-decoration: none;
-    color: var(--font-color-black);
-    font-size: 30px !important;
-    line-height: 1.5;
-}
-
-
-
-
 
 
 
@@ -236,6 +240,13 @@ body {
     .navbar ul li a{
         font-size: 15px;
     }
+
+    .counselor {
+        display: flex;
+        gap: 5vw;
+        margin-bottom: 10vh;
+        width: 1200px;
+    }
 }
 
 @media only screen and (max-width: 1400px){
@@ -259,6 +270,27 @@ body {
     .navbar ul li a{
         font-size: 15px;
     }
+
+    .counselor {
+        width: 900px;
+    }
+
+    .counselor img{
+        height: 300px;
+        width: 300px;
+    }
+
+    .counselor h1{
+        font-size: 54px;
+    }
+    
+    .counselor h2{
+        font-size: 20px;
+    }
+     
+    .counselor li{
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 1000px){
@@ -275,7 +307,20 @@ body {
 }
 
 @media only screen and (max-width: 950px){
+    .counselor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
 
+    .counselor h1, .counselor h2{
+        text-align: center;
+    }
+    .counselor li{
+        font-size: 24px;
+        margin: 0vw 10vw;
+    }
 }
 
 
@@ -307,12 +352,21 @@ body {
     .OpenSlider {
         display: inline-block !important;
     }
-    .article{
-        padding: 100px 10vw;
+
+    .campcounselors .position{
+        font-size: 50px;
     }
-    .text .link {
-        font-size: 22px !important;
-        line-height: 1.5;
+
+    .counselor h1{
+        font-size: 45px;
+    }
+    
+    .counselor h2{
+        font-size: 18px;
+    }
+     
+    .counselor li{
+        font-size: 18px;
     }
     
 }
@@ -324,36 +378,42 @@ body {
         padding: 2vh 0;
     }
 
-    .article h1{
-        font-size: 50px;
+    .campcounselors .position{
+        font-size: 35px;
     }
-    .text .link {
-        font-size: 18px !important;
-        line-height: 1.5;
+    .counselor h1{
+        font-size: 35px;
     }
+    
+    .counselor h2{
+        font-size: 18px;
+    }
+     
+    .counselor li{
+        font-size: 18px;
+    }
+
+    .button {
+        width: auto;
+    }
+
 }
 
 @media only screen and (max-width: 400px){
-    .infobar h1{
-        font-size: 20px;
+    .campcounselors .position{
+        font-size: 32px;
     }
-    .article{
-        padding: 100px 5vw;
-    }
-
-    .article h2, .article h3{
-        font-size: 20px;
-    }
-
-
-    .text .link {
-        font-size: 15px !important;
-        line-height: 2.5;
-    }
-    .button{
-        font-size: 18px;
+    .counselor h1{
+        font-size: 30px;
     }
     
+    .counselor h2{
+        font-size: 16px;
+    }
+     
+    .counselor li{
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 350px){
