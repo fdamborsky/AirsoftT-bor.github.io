@@ -146,14 +146,13 @@ body {
 
 /* LANDING PAGE */
 .LandingPageBG {
-    background-image: url("../resources/home/backgrounds/LandingPageBG.webp");
     /*height: var(--real100vh);*/
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center ;
-
+    background-image: url("../resources/home/backgrounds/LandingPageBG.webp");
 }
 
 .infobar {

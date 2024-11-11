@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: var(--bg-green);
+    background-color: var(--bg-color);
     background-image: url("../resources/home/backgrounds/topography40.webp");
     font-family: "Inter";
     font-weight: 700;

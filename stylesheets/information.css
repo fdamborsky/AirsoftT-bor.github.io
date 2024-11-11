@@ -4,6 +4,11 @@
     margin: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
 :root {
     --font-color-black : #1E1E1E; 
     --font-color-white: #f8f8f8;
@@ -18,17 +23,18 @@
 
 body {
     background-color: var(--bg-color);
+    background-image: url("../resources/home/backgrounds/topography40.webp");
     font-family: "Inter";
     font-weight: 700;
+    height: 100vh;
     width: 100vw;
     overflow-x: hidden !important;
-    background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center ;
     background-image: url("../resources/home/backgrounds/topography40.webp");
 }
 
-/* LANDING PAGE */
+
 
 .navbar{
     z-index: 997;
@@ -82,11 +88,12 @@ body {
 }
 
 .navbar ul li a {
-    display: block;
     text-decoration: none;
     font-size: 20px;
     color: var(--font-color-white);
     width: 100%;
+    display: block;
+
 }
 
 .navbar ul li a img{
@@ -142,74 +149,110 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 
+    width: 100%;
 }
 
-.article {
-    padding: 150px 20vw;
+.navigation{
+    position: fixed;
+    left: 5%;
+    top: 150px;
+}
 
+.navigation li{
+    background-color: var(--button-color);
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.5s linear;
+    margin: 10px 0px;
+    border-radius: 20px;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+.navigation li:hover{
+    background-color: var(--button-color-hover);
+}
+
+.navigation a {
+    color: var(--font-color-white);
+    text-decoration: none;
+}
+
+.text-box{
+    width: 100vw;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-
 }
 
-.text {
-    text-align: left;
+.paragraph{
+    padding: 0% 25%;
+    margin-bottom: 7vh;
+    width: 100%;
 }
 
-.text h2{
-    padding-bottom: 1vh;
-}
-
-.article h1{
-    width: fit-content;
+.paragraph h1{
     text-align: center;
-    font-size: 70px;
-    border-bottom: #000000 solid 5px;
-    margin-bottom: 5vh;
+    font-size: 64px;
 }
 
-.article h2{
-    font-size: 30px;
-    font-weight: 300;
-    text-align: left;
-}
-
-.article h3{
-    font-size: 35px;
-    font-weight: 600;
-    text-align: left;
-}
-
-.button{
-    background-color: var(--light-green);
+.paragraph a{
     text-decoration: none;
-    color: var(--bg-color);
-    padding: 10px;
-    font-size: 20px;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px 20px;
     border-radius: 30px;
-    margin: 5vh 0 0vh 0;
-    
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    background-color: var(--button-color);
+    color: var(--font-color-white);
+    transition: background-color 0.5s linear;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
 }
 
-.button.download{
+.paragraph a:hover{
+    background-color: var(--button-color-hover);
+}
+
+.paragraph .link{
     margin-bottom: 5vh;
 }
 
-.text .link {
-    text-decoration: none;
-    color: var(--font-color-black);
-    font-size: 30px !important;
-    line-height: 1.5;
+.paragraph h2{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 2vh 0;
+
 }
+
+.paragraph h2 span{
+    font-weight: 600;
+}
+
+.paragraph ul {
+    display: block;
+    width: 100%;
+}
+
+.paragraph ul li{
+    list-style: circle;
+    text-indent: 1vw;
+    padding: 0.5vh 0;
+}
+
+.paragraph .mapycz{
+    padding: 5px 10px;
+}
+
+
+
+
+
+
 
 
 
@@ -240,6 +283,8 @@ body {
     .navbar ul li a{
         font-size: 15px;
     }
+
+
 }
 
 @media only screen and (max-width: 1400px){
@@ -263,6 +308,7 @@ body {
     .navbar ul li a{
         font-size: 15px;
     }
+
 }
 
 @media only screen and (max-width: 1000px){
@@ -276,6 +322,14 @@ body {
     .navbar ul li a{
         font-size: 13px;
     }
+
+    .navigation {
+        display: none;
+    }
+    .paragraph{
+        padding: 0 5%;
+    }
+    
 }
 
 @media only screen and (max-width: 950px){
@@ -298,9 +352,8 @@ body {
     .navbar ul li a{
         font-size: 12px;
     }
-    .text .link {
-        font-size: 25px !important;
-        line-height: 1.5;
+    .paragraph{
+        margin-bottom: 5vh;
     }
 
 }
@@ -315,14 +368,12 @@ body {
     .OpenSlider {
         display: inline-block !important;
     }
-    .article{
-        padding: 100px 10vw;
+    .paragraph h1{
+        font-size: 50px;
     }
-    .text .link {
-        font-size: 22px !important;
-        line-height: 1.5;
+    .paragraph h2{
+        font-size: 20px;
     }
-    
 }
 
 @media only screen and (max-width: 500px){
@@ -331,37 +382,37 @@ body {
         height: var(--real100vh);
         padding: 2vh 0;
     }
-
-    .article h1{
-        font-size: 50px;
+    .paragraph h1{
+        font-size: 40px;
     }
-    .text .link {
-        font-size: 18px !important;
-        line-height: 1.5;
+    .paragraph h2{
+        font-size: 18px;
     }
+    .paragraph{
+        padding: 0 10%;
+    }
+    .paragraph a {
+        font-size: 20px;
+    }
+    
 }
 
 @media only screen and (max-width: 400px){
-    .infobar h1{
-        font-size: 20px;
+    .paragraph h1{
+        font-size: 25px;
     }
-    .article{
-        padding: 100px 5vw;
+    .paragraph h2{
+        font-size: 16px;
     }
-
-    .article h2, .article h3{
-        font-size: 20px;
+    .paragraph a {
+        font-size: 16px;
     }
-
-
-    .text .link {
-        font-size: 15px !important;
-        line-height: 2.5;
+    .paragraph .link{
+        margin-top: 20px;
     }
-    .button{
-        font-size: 18px;
+    .paragraph{
+        margin-bottom: 3vh;
     }
-    
 }
 
 @media only screen and (max-width: 350px){
