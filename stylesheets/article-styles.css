@@ -84,7 +84,7 @@ body {
 .navbar ul li a {
     display: block;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--font-color-white);
     width: 100%;
 }
@@ -351,6 +351,10 @@ body {
 
     .article h2, .article h3{
         font-size: 20px;
+    }
+
+    .anthem h2{
+        width: 100%;
     }
 
 
