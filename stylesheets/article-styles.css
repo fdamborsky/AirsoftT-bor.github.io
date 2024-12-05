@@ -60,7 +60,6 @@ body {
 .navbar ul li{
     display: inline-block;
     width: 180px;
-    padding: 10px 0;
     border-radius: 50px;
 
     text-align: center;
@@ -87,6 +86,7 @@ body {
     font-size: 18px;
     color: var(--font-color-white);
     width: 100%;
+    padding: 10px 0;
 }
 
 .navbar ul li a img{

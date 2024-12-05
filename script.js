@@ -1,3 +1,14 @@
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+  
+    loader.classList.add("loader--hidden");
+  
+    loader.addEventListener("transitionend", () => {
+      document.body.removeChild(loader);
+    });
+  });
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const set100vhVar = () => {
         let value = "100vh";
@@ -10,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty("--real100vh", value);
     };
 
-    if (window.innerWidth && window.innerWidth <= 1400){
-        LandingPageBG.style.backgroundImage = "url(resources/home/backgrounds/LandingPageBG2.webp)";
+    if (window.innerWidth && window.innerWidth <= 1200){
+        LandingPageBG.style.backgroundImage = "url(../resources/home/backgrounds/LandingPageBG2.webp)";
     }
     
 

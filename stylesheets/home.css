@@ -27,7 +27,7 @@ body {
 /* LANDING PAGE */
 
 .navbar{
-    z-index: 997;
+    z-index: 999;
     position: fixed;
     width: 100vw;
     height: 80px;
@@ -56,7 +56,6 @@ body {
 .navbar ul li{
     display: inline-block;
     width: 180px;
-    padding: 10px 0;
     border-radius: 50px;
 
     text-align: center;
@@ -83,7 +82,7 @@ body {
     color: var(--font-color-white);
     width: 100%;
     display: block;
-
+    padding: 10px 0;
 }
 
 .navbar ul li a img{
@@ -146,12 +145,11 @@ body {
 
 /* LANDING PAGE */
 .LandingPageBG {
-    /*height: var(--real100vh);*/
-    height: 100vh;
+    height: var(--real100vh);
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center ;
+    background-position: 0px 0px;
     background-image: url("../resources/home/backgrounds/LandingPageBG.webp");
 }
 
@@ -201,9 +199,7 @@ body {
     height: 50vh;
     width: 100vw;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center ;
-
+    background-size: cover; 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -363,10 +359,10 @@ body {
     }
     .infobar a{
         position: absolute;
-        bottom: -5vh;
+        bottom: -60px ;
     }
     .contacts {
-        padding: 10vh 0vh 5vh 0vh;
+        padding: 15vh 0vh 5vh 0vh;
     }
 }
 
@@ -393,6 +389,10 @@ body {
     .sponsors div{
         font-size: 23px;
     }
+    .LandingPageBG {
+        background-position: 0px 0px;
+    }
+   
     
 }
 
@@ -491,10 +491,27 @@ body {
         text-align: center;
     }
     .LandingPageBG{
-        height: 60vh;
+        height: 65vh;
     }
     .sponsors{
         flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .box {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+
+        width: 90vw;
+        height: 70px;
+        gap: 0px;
+    }
+    .box img {
+        height: 60px !important;
+    }
+    .box h1{
+        font-size: 50px;
     }
 }
 
@@ -509,9 +526,16 @@ body {
     .OpenSlider {
         display: block !important;
     }
+    .LandingPageBG {
+        background-position: center;
+
+    }
 }
 
 @media only screen and (max-width: 500px){
+    .box h1{
+        font-size: 40px;
+    }
     .navbarhidden {
         width: 100vw;
         height: var(--real100vh);
@@ -570,7 +594,9 @@ body {
     .infobar h1{
         font-size: 20px;
     }
-
+    .box h1{
+        font-size: 30px;
+    }
     
 }
 
@@ -596,5 +622,11 @@ body {
     }
     .LandingPageBG{
         height: 50vh;
+    }
+    .box h1{
+        font-size: 30px;
+    }
+    .box img {
+        height: 50px !important;
     }
 }
